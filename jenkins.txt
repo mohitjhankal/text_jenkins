@@ -1,0 +1,31 @@
+jenkins is a java application so it is pla,tform independent.Used for continuous integration and continuous delivery
+
+to run jenkins go to folder of jenkins and open command prompt 
+-> java -jar jenkins.war
+
+username - mohitjhankal
+password TWpoYW5rYWwwMUA=
+
+for first time it will ask for password 
+-> goto browser http://localhost:8080
+
+Running jenkins standalone(jetty or winstone) vs Running Jenkins on Tomcat
+
+You can start all your application on a single server on tomcat, we have mostly application using tomcat server. other reason is tomcat is popular servlet container
+
+------->  (demo-1)  freestyle project -> build steps -> execute shell(we will not use this, this is for unix/linux based environment,It allows you to run commands using a Unix shell, such as Bash.),  
+We will use Execute windows batch command(It allows you to run commands using the Windows Command Prompt)
+
+echo "Hello world"
+whoami -> will show user
+dir -> will show directory
+echo. > sample.txt -> to create empty text file
+
+change theme-> goto plugins, get plugin for a theme and in system configurations goto appearance
+
+Role-based-authorization ->> security -> authorization -> role-based strategy. It will create manage and assign roles
+In manage and assign roles we can give access to our Users
+
+-> type text.txt  to open a text file
+
+dummy user -> username -> krish password -> krish email -> krish1@gmail.com	
