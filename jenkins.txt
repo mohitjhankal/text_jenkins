@@ -1,3 +1,4 @@
+dummy user -> username -> krish password -> krish email -> krish1@gmail.com	
 jenkins is a java application so it is pla,tform independent.Used for continuous integration and continuous delivery
 
 to run jenkins go to folder of jenkins and open command prompt 
@@ -26,6 +27,30 @@ change theme-> goto plugins, get plugin for a theme and in system configurations
 Role-based-authorization ->> security -> authorization -> role-based strategy. It will create manage and assign roles
 In manage and assign roles we can give access to our Users
 
+/// -----> (demo-2) freesytle project
 -> type text.txt  to open a text file
+// In execute windows batch command 
+echo "Hello world"
+cd C:\Users\mohit.jhankal\Desktop\github
+git clone https://github.com/mohitjhankal/text_jenkins.git
 
-dummy user -> username -> krish password -> krish email -> krish1@gmail.com	
+this will give error if we build again because text_jenkins will already be there! 
+
+->Build Environment
+-->Delete workspace before build starts
+this will not solve above problem because it will wipeout data from home directory which is C:\Users\mohit.jhankal\.jenkins\workspace\demo-2, and we want to wipe data from C:\Users\mohit.jhankal\Desktop\github. So to solve this problem we going to use 
+
+echo "Hello world"
+cd C:\Users\mohit.jhankal\Desktop\github
+
+# Delete the existing text_jenkins directory if it exists
+if exist text_jenkins (
+    rmdir /s /q text_jenkins
+)
+
+# Clone the repository
+git clone https://github.com/mohitjhankal/text_jenkins.git
+
+Note : cloning from git can be automatically done with plugin
+Source Code Management -> Git, put url here https://github.com/mohitjhankal/text_jenkins, and that's it
+ 
